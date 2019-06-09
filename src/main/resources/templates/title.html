@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>サンプル</title>
+  <link rel="stylesheet" media="all" th:href="@{/css/sample.css}"/>
+  <!-- <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/js/menu.js" th:src="@{/js/menu.js}"></script>
+  <!-- <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+</head>
+
+<body>
+  <header>
+    <div class="header-main">
+      鳥貴族セレクト
+    </div>
+  </header>
+  <div class="main">
+    <h2>品数を選んでメニューを選択してください！！</h2>
+  </div>
+  <div class="number-title">品数</div>
+  <select class="selectbox menu-number" name="selectName">
+    <option value="">選択する</option>
+    <option value="1">1品</option>
+    <option value="2">2品</option>
+    <option value="3">3品</option>
+    <option value="4">4品</option>
+    <option value="5">5品</option>
+  </select>
+  <div class="menus">
+    <div class="menus-list">
+      <ul>
+        <li><a class=menu-name href="./menu">焼鳥</a></li>
+        <li><a class=menu-name href="./menu">逸品料理</a></li>
+        <li><a class=menu-name href="./menu">スピードメニュー</a></li>
+        <li><a class=menu-name href="./menu">ご飯もの</a></li>
+        <li><a class=menu-name href="./menu">デザート</a></li>
+        <li><a class=menu-name href="./menu">ドリンク</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
