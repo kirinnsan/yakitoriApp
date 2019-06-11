@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.mapper.MMenuMapper;
 
 @Controller
-@RequestMapping(value = "/title")
+@RequestMapping(value = "/")
 public class MenuController {
 
 	@Autowired
