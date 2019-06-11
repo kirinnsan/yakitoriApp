@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>サンプル</title>
+  <title>結果</title>
 </head>
 
 <body>
-画面遷移用サンプルページ
+  <ul th:each="mMenu : ${mMenuList}">
+    <li th:text=${mMenu.menuName}> </li>
+  </ul>
 </body>
 
 </html>

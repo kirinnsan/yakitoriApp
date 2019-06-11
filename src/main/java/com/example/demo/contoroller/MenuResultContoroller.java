@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -26,19 +27,18 @@ public class MenuResultContoroller {
 	 */
 	@RequestMapping(value = "")
 	public String resultMenu(@RequestParam("param") String param,
-			@RequestParam("menu") String menu) {
+			@RequestParam("menu") String menu, Model model) {
 
 		List<MMenu> mMenuList = new ArrayList<MMenu>();
 
-		System.out.println("param" + param);
-		System.out.println("menu" + menu);
-
 		mMenuList = menuService.getMenuList(Integer.parseInt(param), menu);
+
+		model.addAttribute("mMenuList", mMenuList);
 
 		for(MMenu mmenu:mMenuList) {
 			System.out.println(mmenu.getMenuId());
 			System.out.println(mmenu.getMenuName());
 		}
-		return "sample2";
+		return "result";
 	}
 }
