@@ -16,15 +16,15 @@ public class MenuService {
 
 	/**
 	 * 指定した品数と種類でメニューを取得
-	 * @param menuTypeID
-	 * @param menuNum
+	 * @param menuTypeID メニューの種類
+	 * @param menuNum 品数
 	 * @return
 	 */
 	public List<MMenu> getMenuList(int menuNum, String menuName) {
 
-		// メニュー種類の数値型で取得
+		// メニューの種類を数値型で取得
 		int  menuTypeID = getMenuTypeID(menuName);
-		// メニュー種類と品数で取得
+		// メニューの種類と品数でメニューを取得し返却
 		return mMenuMapperManual.selectByExampleLimit(menuNum, menuTypeID);
 	}
 

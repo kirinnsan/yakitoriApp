@@ -19,12 +19,14 @@ public class MenuResultContoroller {
 	@Autowired
 	private MenuService menuService;
 
-	/**
-	 *
-	 * @param param
-	 * @param menu
-	 * @return
-	 */
+    /**
+     * 対象のメニューを品数の件数分ランダムに取得し、
+     * 結果画面に返却する。
+     * @param param 選択された品数
+     * @param menu 押下されたメニュー
+     * @param model モデル
+     * @return
+     */
 	@RequestMapping(value = "")
 	public String resultMenu(@RequestParam("param") String param,
 			@RequestParam("menu") String menu, Model model) {
@@ -35,10 +37,6 @@ public class MenuResultContoroller {
 
 		model.addAttribute("mMenuList", mMenuList);
 
-		for(MMenu mmenu:mMenuList) {
-			System.out.println(mmenu.getMenuId());
-			System.out.println(mmenu.getMenuName());
-		}
 		return "result";
 	}
 }

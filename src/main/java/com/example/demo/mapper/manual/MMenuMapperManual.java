@@ -9,12 +9,13 @@ import com.example.demo.entity.MMenu;
 @Mapper
 public interface MMenuMapperManual{
 
-	/**
-	 * 指定した品数と種類でメニューを取得
-	 * @param example
-	 * @param menuTypeId
-	 * @return
-	 */
+    /**
+     * 指定した品数と種類で、
+     * メニューのリストを取得する。
+     * @param menuNum 品数
+     * @param menuTypeID メニュー種類
+     * @return
+     */
 	List<MMenu> selectByExampleLimit(@Param("menuNum") int menuNum, @Param("menuTypeID") int menuTypeID);
 
 }
