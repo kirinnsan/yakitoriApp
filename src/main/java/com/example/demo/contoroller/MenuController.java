@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.demo.entity.MMenu;
 import com.example.demo.mapper.MMenuMapper;
 
 @Controller
@@ -18,9 +17,9 @@ public class MenuController {
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String getMenuTitle() {
 
-		MMenu  a = mMenuMapper.selectByPrimaryKey(1);
+/*		MMenu  a = mMenuMapper.selectByPrimaryKey(1);*/
 
-		System.out.println(a.getMenuName());
+/*		System.out.println(a.getMenuName());*/
 		return "title";
 	}
 
