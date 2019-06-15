@@ -1,5 +1,18 @@
 
+// セレクトボックスを初期化
+function init() {
+  if ($('select option[selected=selected]').attr('selected')) {
+    $('select').val($('select option[selected=selected]').val());
+  }
+  else {
+    $('select option:first').prop('selected', 'selected');
+  }
+}
+
 $(function() {
+
+    init();
+    $(window).on('pageshow', init);
 
 	var selectedValue = "";
 
