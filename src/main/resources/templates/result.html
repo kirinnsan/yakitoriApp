@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>結果</title>
+   <link rel="stylesheet" media="all" th:href="@{/css/menu.css}"/>
 </head>
 
 <body>
-  <ul th:each="mMenu : ${mMenuList}">
-    <li th:text=${mMenu.menuName}> </li>
+  <ul class="menu-result" th:each="mMenu : ${mMenuList}">
+    <li  th:text=${mMenu.menuName}> </li>
   </ul>
 </body>
 

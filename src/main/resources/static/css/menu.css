@@ -59,4 +59,9 @@ background-color: #EEFFFF;
 	overflow: hidden;
 	width: 30%;
 }
-.
+
+.menu-result {
+	font-size:50px;
+	text-align: center;
+	list-style:none;
+}
